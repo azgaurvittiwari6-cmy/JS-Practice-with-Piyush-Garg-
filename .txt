@@ -1,0 +1,20 @@
+JS  question 
+
+Ques. 1. What is Java Script?
+Ans. Java Script is a programing language that is used to make the website interactive.  We can link 
+Jvascript in two ways:
+1. Internal linking  2. External linking
+
+Ques. 2.  What is internal and external linking?
+Ans.  External linking:JavaScript is written in a separate .js file and linked to the HTML file.
+    Internal linking: JavaScript is written inside the HTML file using the <script> tag.
+
+Ques. 3. What is variable,let and const?
+Ans. variable is a container that stores data.    
+     var,let and const are used to declare variables.   
+     var is a global scope variable.   
+     let and const are block scope variables.       
+
+     
+
+
