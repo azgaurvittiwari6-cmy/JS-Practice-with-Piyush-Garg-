@@ -15,6 +15,49 @@ Ans. variable is a container that stores data.
      var is a global scope variable.   
      let and const are block scope variables.       
 
+     Ques. 4. What are numbers ,strings,boolean,null and undefined in Java Script?
+     Ans.   numbers are used to store numbers.   
+     strings are used to store text.   
+     boolean are used to store true or false.   
+     null is used to store empty value.   
+     undefined is used to store undefined value.    
      
+   Quse. 5 What are operators in Java Script?
+   Ans. Operators in Java Script are special symbols used ti perform operations on variables and values.
+    Ques. 6. What is the full form of NAN in Java Script?
+    Ans. NAN  full form is Not a number.
 
+    Ques. 7. Give one example of if else.
+    Ans.  let age = 18;
+    if(age<= 18){
+        console.log("You can vote)
+    }else{
+        console.log("You cannot vote")
+    }
 
+    Ques. 8. Write if else condition in one line
+    Ans. let age = 18;
+    let result=age>=18?"Adult":Minor;
+    console.log(result);    
+
+    Ques.9 What is the meaning of "?"and ":" in Java Script?
+    Ans. "?"means if yhe condition is true
+    ":" means else  
+    Ques.10 Give one example of  switch case in java script    
+    Ans.  let a = 30
+let opt = '+'
+let b = 40
+
+switch(opt){
+    case '+':console.log(a+b);
+    break;
+    case '-':console.log(a-b);
+    break;
+    case '*':console.log(a*b);
+    break;
+    case '/':console.log(a/b);
+    break;
+    default:console.log('Invalid operator!');   
+    
+}
+    
