@@ -1,48 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Multi Button Counter</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
 
-    button {
-      padding: 10px 15px;
-      margin: 8px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-  </style>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6fb;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .quiz-question {
+            background: #ffffff;
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .quiz-question h3 {
+            margin-bottom: 15px;
+            color: #222;
+        }
+
+        .btn {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .btn button {
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            background: #e9ecf7;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn button:hover {
+            background: #5b6cff;
+            color: white;
+        }
+    </style>
 </head>
 <body>
 
-  <h2>Multi Button Click Counter</h2>
+    <h1>📝 Quiz App</h1>
 
-  <button class="btn">Button 1: 0</button>
-  <button class="btn">Button 2: 0</button>
-  <button class="btn">Button 3: 0</button>
-  <button class="btn">Button 4: 0</button>
-  <button class="btn">Button 5: 0</button>
+    <!-- Question 1 -->
+    <div class="quiz-question">
+        <h3>1️⃣ Which festival is called the Festival of Lights?</h3>
+        <div class="btn">
+            <button>Diwali</button>
+            <button>Eid</button>
+            <button>Christmas</button>
+        </div>
+    </div>
 
-  <script>
-    const buttons = document.querySelectorAll(".btn");
+    <!-- Question 2 -->
+    <div class="quiz-question">
+        <h3>2️⃣ Which planet is known as the Red Planet?</h3>
+        <div class="btn">
+            <button>Earth</button>
+            <button>Mars</button>
+            <button>Jupiter</button>
+        </div>
+    </div>
 
-    function handleClick(button) {
-      let count = 0;
+    <!-- Question 3 -->
+    <div class="quiz-question">
+        <h3>3️⃣ Who is known as the Father of the Nation (India)?</h3>
+        <div class="btn">
+            <button>Jawaharlal Nehru</button>
+            <button>Mahatma Gandhi</button>
+            <button>Subhash Chandra Bose</button>
+        </div>
+    </div>
 
-      button.addEventListener("click", function () {
-        count++;
-        button.innerText = "Clicked: " + count;
-      });
-    }
+    <script>
+        const buttons = document.querySelectorAll('.btn button');
 
-    for (let i = 0; i < buttons.length; i++) {
-      handleClick(buttons[i]);
-    }
-  </script>
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                alert('You selected correct answer ' );
+            });
+        });
+    </script>
 
 </body>
 </html>
