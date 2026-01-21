@@ -1,18 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>                                                       
-    <h3> DOM-Document Object Model</h3>
+
+<body>
+
+    <div class="block">Welcome to my website</div>
+    <button id = "clickButton">Click me</button>
+    <div id="my-container"></div>
+    <h3> DOM-Documen t Object Model</h3>
+   
+   
     <script>
-    document.title = "Anuj";    
-    document.write("Hello World");  
-                
-      
-        
+          const button = document.getElementById('clickButton')
+          const container = document.getElementById('my-container')
+                 let count = 1;
+          button.addEventListener("click",()=>{
+            const el = document.createElement("li")
+            el.innerText = count
+            container.appendChild(el);
+            count++;
+          })
+          
     </script>
+
 </body>
+
 </html>
