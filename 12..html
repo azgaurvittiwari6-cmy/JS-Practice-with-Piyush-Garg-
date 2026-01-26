@@ -1,57 +1,39 @@
-    <!DOCTYPE html>
-    <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Example</title>
+</head>
+<body>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-    </head>
+  <div class="block">Welcome to my website</div>
 
-    <body>
+  <h3>DOM - Document Object Model</h3>
+  <h3 id="username">Hey My name is:</h3>
 
-        <div class="block">Welcome to my website</div>
-        <button id = "clickButton">➕<btton>
-        <div id="my-container">
-            <button>➖<button>
-        </div>   
-        <h3> DOM-Documen t Object Model</h3>
-    
-    
-      
-              <script>
-                let a = 10 
-                let b = 20
-                 let result = a+b
-            //  async function getData(){
-            //         let resultFromServer = await fetch(
-            //        " https://jsonplaceholder.typicode.com/todos/1"
-            //      )
-            //       console.log(await resultFromServer.json());    
-            //    }
-  
-            //  getData()
-            fetch("https://jsonplaceholder.typicode.com/todos/1")
-            .then((data) =>{
-                console.log(data);
-                
-            })
-            .catch((error) =>{
-                console.log(error);
+  <button id="clickButton">Click me</button>
+  <br><br>
+  <input id="input-username" type="text" placeholder="Enter your name">
 
-                
-            })
-            console.log(result);
-            
-             
+  <script>
+    const button = document.getElementById("clickButton")
+    const uname = document.getElementById("input-username")
+    const username = document.getElementById("username")
 
-                      
-                 
+    button.addEventListener("click", () => {
+      const value = uname.value
+      localStorage.setItem("name", value)
+      username.innerText = "Hey My name is: " + value
+    })
 
+    window.addEventListener("load", () => {
+      const value = localStorage.getItem("name")
+      if (value) {
+        username.innerText = "Hey My name is: " + value
+      }
+    })
+  </script>
 
-</script>
-
-     
-
-    </body>
-
-    </html>
+</body>
+</html>
