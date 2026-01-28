@@ -7,33 +7,25 @@
 </head>
 <body>
 
-  <div class="block">Welcome to my website</div>
-
-  <h3>DOM - Document Object Model</h3>
-  <h3 id="username">Hey My name is:</h3>
-
-  <button id="clickButton">Click me</button>
-  <br><br>
-  <input id="input-username" type="text" placeholder="Enter your name">
+  <h1>    Getting Users Location</h1>
+  <button id="get-location-button">Getting Location</button>
 
   <script>
-    const button = document.getElementById("clickButton")
-    const uname = document.getElementById("input-username")
-    const username = document.getElementById("username")
+    const button = document.getElementById('get-location-button')
+
+    function gotLocation(position) {
+      console.log(position.coords.latitude, position.coords.longitude)
+    }
+
+    function failedToGet() {
+      console.log("There is some issue");
+    }
 
     button.addEventListener("click", () => {
-      const value = uname.value
-      localStorage.setItem("name", value)
-      username.innerText = "Hey My name is: " + value
-    })
-
-    window.addEventListener("load", () => {
-      const value = localStorage.getItem("name")
-      if (value) {
-        username.innerText = "Hey My name is: " + value
-      }
+      navigator.geolocation.getCurrentPosition(gotLocation, failedToGet)
     })
   </script>
+  
 
 </body>
 </html>
